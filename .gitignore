@@ -1,0 +1,5 @@
+#all venv files
+authenv/
+
+#secret files ignore
+.env
