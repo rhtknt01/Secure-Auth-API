@@ -25,19 +25,30 @@ class UserLoginSerializer(serializers.ModelSerializer):
         model = APIUser
         fields = ['email', 'password']
         extra_kwargs = {'password':{'style':{'input_type':'password'}}}
-        
-class CityListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = City
-        fields = ['name']
 
-class StateListSerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model = State
-        fields = ['name','country']
 
 class CountryListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Country
         fields = ['name']
+
+
+class StateListSerializer(serializers.ModelSerializer):
+    country = CountryListSerializer(read_only=True)
+
+    class Meta:
+        model = State
+        fields = ['name', 'country']
+        
+
+class CityListSerializer(serializers.ModelSerializer):
+    state = serializers.SerializerMethodField()
+    class Meta:
+        model = City
+        fields = ['name', 'state']
+
+    def get_state(self, obj):
+        # Return only the name of the state
+        return {'name': obj.state.name}
+
+
