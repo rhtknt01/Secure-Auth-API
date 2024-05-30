@@ -17,7 +17,7 @@ To install necessary modules and packages, follow these steps:
 
 1. Clone the repository:
     ```bash
-    
+    https://github.com/rhtknt01/Secure-Auth-API.git
     cd Secure-Auth-API
     ```
 
