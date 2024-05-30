@@ -6,7 +6,8 @@ Tools & technologies used: Python, Django, REST API, JWT, MySQL
 ## Description
 
 Created a robust authentication REST API using Django and Django REST Framework. 
-Integrated JWT tokens for secure and scalable user authentication.– Developed social login features to streamline user access via popular platforms.
+Integrated JWT tokens for secure and scalable user authentication.
+Developed social login features to streamline user access via popular platforms.
 Ensured comprehensive security and ease of use with modern authentication protocols.
 
 ## Installation
@@ -17,7 +18,7 @@ To install necessary modules and packages, follow these steps:
 
 1. Clone the repository:
     ```bash
-    https://github.com/rhtknt01/Secure-Auth-API.git
+    git clone https://github.com/rhtknt01/Secure-Auth-API.git
     cd Secure-Auth-API
     ```
 
